@@ -26,28 +26,28 @@ class Locations {
 
     locat.push(this);
   }
+
   display() {
-    return `
-    <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
+    return ` <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
         <div class="card" style="margin-top:10%">
             <div class="card-body" ">
-            <p class="card-text" style="font-size:20px"> ${this.name}
-            </p>
-            <p class="card-text">
-            <strong>Address:</strong> ${this.address}, ${this.city}
-            </p>
-                <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}
-                </p>  
-
-                <img src="${this.image}" class="card-img-top" alt="${
+              <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+                this.name
+              }</p>
+              <p class="card-text"><strong>Address:</strong> ${this.address}, ${
+      this.city
+    }</p>
+              <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}</p>  
+              <img src="${this.image}" class="card-img-top" alt="${
       this.name
     }" />
-                </div>
-                <p class="card-title"> ${transformDate(this.create)}
-                </p>  
-                    </div>
-                </div>
-                
+            </div>
+                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
+                  this.create
+                )}</p>  
+        </div>
+      </div>
+      </div>            
     `;
   }
 }
@@ -75,10 +75,12 @@ class Restaurant extends Locations {
   }
 
   display() {
-    return `<div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
+    return `   <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
     <div class="card" style="margin-top:10%">
         <div class="card-body">
-        <p class="card-text" style="font-size:20px"> ${this.name}
+        <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+          this.name
+        }
         </p>
         <p class="card-text">
         <strong>Address:</strong> ${this.address}, ${this.city}
@@ -89,10 +91,14 @@ class Restaurant extends Locations {
             <p class="card-text">${this.cuzine}</p>
             <a href="${this.link}" class="link-primary">${this.link}</a>
             <img src="${this.image}" class="card-img-top" alt="${this.name}" />
-            <p class="card-title"> ${transformDate(this.create)}</p>
             </div>
-            </div>
+                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
+                  this.create
+                )}</p>  
         </div>
+            </div>
+            </div>
+        </div>     
      `;
   }
 }
@@ -123,11 +129,12 @@ class Events extends Locations {
   }
 
   display() {
-    return `
-    <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
+    return `  <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
     <div class="card" style="margin-top:10%">
     <div class="card-body" >
-    <p class="card-text" style="font-size:20px"> ${this.name}
+    <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+      this.name
+    }
     </p>
     <p class="card-text">
     <strong>Address:</strong> ${this.address}, ${this.city}
@@ -140,10 +147,15 @@ class Events extends Locations {
         }€</p>
         <a href="${this.link}" class="link-primary">"${this.link}</a>
         <img src="${this.image}" class="card-img-top" alt="${this.name}" />
-        <p class="card-title"> ${transformDate(this.create)}</p>
+        </div>
+                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
+                  this.create
+                )}</p>  
+        </div>
         </div>
             </div>
         </div>
+       
   `;
   }
 }
@@ -279,6 +291,8 @@ for (let val of locat) {
   document.getElementById("loc").innerHTML += val.display();
 }
 
+// Sort the Date  ascending and descending with the sort button
+
 let btn = true;
 
 document.getElementById("sort").addEventListener("click", function () {
@@ -303,6 +317,8 @@ document.getElementById("sort").addEventListener("click", function () {
 
   document.getElementById("loc").innerHTML = sortingLoc;
 });
+
+// Transform the Dates
 
 function transformDate(date) {
   var d = new Date(date);

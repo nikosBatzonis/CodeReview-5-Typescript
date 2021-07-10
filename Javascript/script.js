@@ -26,7 +26,7 @@ var Locations = /** @class */ (function () {
         locat.push(this);
     }
     Locations.prototype.display = function () {
-        return "\n    <div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n        <div class=\"card\" style=\"margin-top:10%\">\n            <div class=\"card-body\" \">\n            <p class=\"card-text\" style=\"font-size:20px\"> " + this.name + "\n            </p>\n            <p class=\"card-text\">\n            <strong>Address:</strong> " + this.address + ", " + this.city + "\n            </p>\n                <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "\n                </p>  \n\n                <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n                </div>\n                <p class=\"card-title\"> " + transformDate(this.create) + "\n                </p>  \n                    </div>\n                </div>\n                \n    ";
+        return " <div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n        <div class=\"card\" style=\"margin-top:10%\">\n            <div class=\"card-body\" \">\n              <p class=\"card-text\" style=\"font-size:25px; color:rgb(98, 98, 98); font-weight:bold\"> " + this.name + "</p>\n              <p class=\"card-text\"><strong>Address:</strong> " + this.address + ", " + this.city + "</p>\n              <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "</p>  \n              <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n            </div>\n                <p class=\"card-title\" style=\"padding-left: 20px\"><strong>Day of Visit:</strong> " + transformDate(this.create) + "</p>  \n        </div>\n      </div>\n      </div>            \n    ";
     };
     return Locations;
 }());
@@ -40,7 +40,7 @@ var Restaurant = /** @class */ (function (_super) {
         return _this;
     }
     Restaurant.prototype.display = function () {
-        return "<div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n    <div class=\"card\" style=\"margin-top:10%\">\n        <div class=\"card-body\">\n        <p class=\"card-text\" style=\"font-size:20px\"> " + this.name + "\n        </p>\n        <p class=\"card-text\">\n        <strong>Address:</strong> " + this.address + ", " + this.city + "\n        </p>\n            <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "\n            </p><strong>tel:</strong> " + this.telephoneNum + "\n            </p>\n            <p class=\"card-text\">" + this.cuzine + "</p>\n            <a href=\"" + this.link + "\" class=\"link-primary\">" + this.link + "</a>\n            <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n            <p class=\"card-title\"> " + transformDate(this.create) + "</p>\n            </div>\n            </div>\n        </div>\n     ";
+        return "   <div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n    <div class=\"card\" style=\"margin-top:10%\">\n        <div class=\"card-body\">\n        <p class=\"card-text\" style=\"font-size:25px; color:rgb(98, 98, 98); font-weight:bold\"> " + this.name + "\n        </p>\n        <p class=\"card-text\">\n        <strong>Address:</strong> " + this.address + ", " + this.city + "\n        </p>\n            <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "\n            </p><strong>tel:</strong> " + this.telephoneNum + "\n            </p>\n            <p class=\"card-text\">" + this.cuzine + "</p>\n            <a href=\"" + this.link + "\" class=\"link-primary\">" + this.link + "</a>\n            <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n            </div>\n                <p class=\"card-title\" style=\"padding-left: 20px\"><strong>Day of Visit:</strong> " + transformDate(this.create) + "</p>  \n        </div>\n            </div>\n            </div>\n        </div>     \n     ";
     };
     return Restaurant;
 }(Locations));
@@ -55,7 +55,7 @@ var Events = /** @class */ (function (_super) {
         return _this;
     }
     Events.prototype.display = function () {
-        return "\n    <div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n    <div class=\"card\" style=\"margin-top:10%\">\n    <div class=\"card-body\" >\n    <p class=\"card-text\" style=\"font-size:20px\"> " + this.name + "\n    </p>\n    <p class=\"card-text\">\n    <strong>Address:</strong> " + this.address + ", " + this.city + "\n    </p>\n        <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "\n        </p><strong>Event Date:</strong> " + this.eventDate + ", " + this.eventTime + " \n        </p>\n        <p class=\"card-text\"> <strong>Ticket Price:</strong> " + this.ticketPrice + "\u20AC</p>\n        <a href=\"" + this.link + "\" class=\"link-primary\">\"" + this.link + "</a>\n        <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n        <p class=\"card-title\"> " + transformDate(this.create) + "</p>\n        </div>\n            </div>\n        </div>\n  ";
+        return "  <div class=\"col col-12 col-md-6 col-lg-3 d-flex justify-content-around\" >\n    <div class=\"card\" style=\"margin-top:10%\">\n    <div class=\"card-body\" >\n    <p class=\"card-text\" style=\"font-size:25px; color:rgb(98, 98, 98); font-weight:bold\"> " + this.name + "\n    </p>\n    <p class=\"card-text\">\n    <strong>Address:</strong> " + this.address + ", " + this.city + "\n    </p>\n        <p class=\"card-title\"><strong>ZIP:</strong> " + this.zipCode + "\n        </p><strong>Event Date:</strong> " + this.eventDate + ", " + this.eventTime + " \n        </p>\n        <p class=\"card-text\"> <strong>Ticket Price:</strong> " + this.ticketPrice + "\u20AC</p>\n        <a href=\"" + this.link + "\" class=\"link-primary\">\"" + this.link + "</a>\n        <img src=\"" + this.image + "\" class=\"card-img-top\" alt=\"" + this.name + "\" />\n        </div>\n                <p class=\"card-title\" style=\"padding-left: 20px\"><strong>Day of Visit:</strong> " + transformDate(this.create) + "</p>  \n        </div>\n        </div>\n            </div>\n        </div>\n       \n  ";
     };
     return Events;
 }(Locations));
@@ -75,6 +75,7 @@ for (var _i = 0, locat_1 = locat; _i < locat_1.length; _i++) {
     var val = locat_1[_i];
     document.getElementById("loc").innerHTML += val.display();
 }
+// Sort the Date  ascending and descending with the sort button
 var btn = true;
 document.getElementById("sort").addEventListener("click", function () {
     if (btn) {
@@ -97,6 +98,7 @@ document.getElementById("sort").addEventListener("click", function () {
     }
     document.getElementById("loc").innerHTML = sortingLoc;
 });
+// Transform the Dates
 function transformDate(date) {
     var d = new Date(date);
     var datestring = d.getDate() +

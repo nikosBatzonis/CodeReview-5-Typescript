@@ -38,7 +38,9 @@ class Locations {
       this.city
     }</p>
               <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}</p>  
-              <img src="${this.image}" class="card-img-top" alt="${
+              <img src="${
+                this.image
+              }" class="card-img-top img-fluid d-none d-md-inline" alt="${
       this.name
     }" />
             </div>
@@ -90,7 +92,11 @@ class Restaurant extends Locations {
             </p>
             <p class="card-text">${this.cuzine}</p>
             <a href="${this.link}" class="link-primary">${this.link}</a>
-            <img src="${this.image}" class="card-img-top" alt="${this.name}" />
+            <img src="${
+              this.image
+            }" class="card-img-top img-fluid d-none d-md-inline" alt="${
+      this.name
+    }" />
             </div>
                 <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
                   this.create
@@ -146,7 +152,11 @@ class Events extends Locations {
           this.ticketPrice
         }€</p>
         <a href="${this.link}" class="link-primary">"${this.link}</a>
-        <img src="${this.image}" class="card-img-top" alt="${this.name}" />
+        <img src="${
+          this.image
+        }" class="card-img-top img-fluid d-none d-md-inline" alt="${
+      this.name
+    }" />
         </div>
                 <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
                   this.create

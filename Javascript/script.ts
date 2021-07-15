@@ -28,23 +28,25 @@ class Locations {
   }
 
   display() {
-    return ` <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
-        <div class="card" style="margin-top:10%">
-            <div class="card-body" ">
-              <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+    return ` <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-center" >
+        <div class="" style="margin-top:10%; margin-bottom: 5%">
+            <div class="card-body"  style="background-color:rgb(98, 98, 98)">
+              <p class="card-text" style="font-size:25px; font-weight:bold; text-align:center "> ${
                 this.name
               }</p>
+              <p class="card-text">
+              <img src="${
+                this.image
+              }" class="card-img-top img-fluid d-none d-md-inline" style="width: 300px; height:200px; border-radius: 15px" alt="${
+      this.name
+    }" /></p>
               <p class="card-text"><strong>Address:</strong> ${this.address}, ${
       this.city
     }</p>
-              <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}</p>  
-              <img src="${
-                this.image
-              }" class="card-img-top img-fluid d-none d-md-inline" alt="${
-      this.name
-    }" />
-            </div>
-                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
+              <p class="card-title"><strong>Zip Code:</strong> ${
+                this.zipCode
+              }</p>  
+                <p class="card-title" ><strong>Day of Visit:</strong> ${transformDate(
                   this.create
                 )}</p>  
         </div>
@@ -78,33 +80,39 @@ class Restaurant extends Locations {
 
   display() {
     return `   <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
-    <div class="card" style="margin-top:10%">
-        <div class="card-body">
-        <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+    <div class="" style=" margin-bottom: 10%">
+        <div class="card-body" style="background-color:rgb(98, 98, 98)">
+        <p class="card-text" style="font-size:25px; font-weight:bold; text-align:center"> ${
           this.name
         }
         </p>
         <p class="card-text">
-        <strong>Address:</strong> ${this.address}, ${this.city}
-        </p>
-            <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}
-            </p><strong>tel:</strong> ${this.telephoneNum}
-            </p>
-            <p class="card-text">${this.cuzine}</p>
-            <a href="${this.link}" class="link-primary">${this.link}</a>
-            <img src="${
-              this.image
-            }" class="card-img-top img-fluid d-none d-md-inline" alt="${
+        <img src="${
+          this.image
+        }" class="card-img-top img-fluid d-none d-md-inline image" style="width: 300px; height:200px; border-radius: 15px" alt="${
       this.name
     }" />
-            </div>
-                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
+    </p>
+    <p>
+        <strong>Address:</strong> ${this.address}, ${this.city}
+       </p>
+            <p class="card-title"><strong>Zip Code:</strong> ${this.zipCode}
+            </p>
+            <p>
+            <strong>tel:</strong> ${this.telephoneNum}
+            </p>
+            <p class="card-text">${this.cuzine}</p>
+            <a href="${
+              this.link
+            }" class="link-primary" style="font-size:12px">${this.link}</a>
+      
+           
+                <p class="card-title" ><strong>Day of Visit:</strong> ${transformDate(
                   this.create
                 )}</p>  
         </div>
+            </div>   
             </div>
-            </div>
-        </div>     
      `;
   }
 }
@@ -136,34 +144,38 @@ class Events extends Locations {
 
   display() {
     return `  <div class="col col-12 col-md-6 col-lg-3 d-flex justify-content-around" >
-    <div class="card" style="margin-top:10%">
-    <div class="card-body" >
-    <p class="card-text" style="font-size:25px; color:rgb(98, 98, 98); font-weight:bold"> ${
+    <div class="" style="margin-top:10%">
+    <div class="card-body" style="background-color:rgb(98, 98, 98)">
+    <p class="card-text" style="font-size:25px; font-weight:bold; text-align:center"> ${
       this.name
     }
     </p>
     <p class="card-text">
-    <strong>Address:</strong> ${this.address}, ${this.city}
+    <img src="${
+      this.image
+    }" class="card-img-top img-fluid d-none d-md-inline" style="width: 300px; height:200px; border-radius: 15px" alt="${
+      this.name
+    }" />
+    
     </p>
-        <p class="card-title"><strong>ZIP:</strong> ${this.zipCode}
-        </p><strong>Event Date:</strong> ${this.eventDate}, ${this.eventTime} 
+    <strong>Address:</strong> ${this.address}, ${this.city}
+        <p class="card-title"><strong>Zip Code:</strong> ${this.zipCode}
+        </p>
+        <p>
+        <strong>Event Date:</strong> ${this.eventDate}, ${this.eventTime} 
         </p>
         <p class="card-text"> <strong>Ticket Price:</strong> ${
           this.ticketPrice
         }€</p>
-        <a href="${this.link}" class="link-primary">"${this.link}</a>
-        <img src="${
-          this.image
-        }" class="card-img-top img-fluid d-none d-md-inline" alt="${
-      this.name
-    }" />
+        <a href="${this.link}" class="link-primary" style="font-size:12px">"${
+      this.link
+    }</a>
+    <p class="card-title" ><strong>Day of Visit:</strong> ${transformDate(
+      this.create
+    )}</p>  
         </div>
-                <p class="card-title" style="padding-left: 20px"><strong>Day of Visit:</strong> ${transformDate(
-                  this.create
-                )}</p>  
+              
         </div>
-        </div>
-            </div>
         </div>
        
   `;
@@ -174,31 +186,31 @@ var location1 = new Locations(
   "Budapest center",
   "Budapest",
   210256,
-  "../Images/budapest.jfif",
+  "Images/budapest.jfif",
   "Budapest",
   new Date(2014, 10, 15, 20, 12)
 );
 var location2 = new Locations(
-  "Copenhagen 28 B",
+  "Copen 28 5",
   "Copenhagen",
   12257,
-  "../Images/copenhagen.jfif",
+  "Images/copenhagen.jfif",
   "Copenhagen",
   new Date(2014, 10, 16, 20, 12)
 );
 var location3 = new Locations(
-  "Japanen japan 54",
+  "Japoigici japan 54",
   "Japan",
   1254263,
-  "../Images/japan.jfif",
+  "Images/japan.jfif",
   "Japan",
   new Date(2014, 10, 16, 20, 13)
 );
 var location4 = new Locations(
-  "La paris 54",
+  "La paris deux ti 54",
   "Paris",
   745520,
-  "../Images/paris.jfif",
+  "Images/paris.jfif",
   "Paris",
   new Date()
 );
@@ -207,7 +219,7 @@ var restaurant1 = new Restaurant(
   "Platys Gialos",
   "Branco",
   7154211,
-  "../Images/branco.jpg",
+  "Images/branco.jpg",
   "Myconos",
   new Date(2020, 10, 15, 20, 12),
   "0030 / 2289025500",
@@ -218,7 +230,7 @@ var restaurant2 = new Restaurant(
   "Korica 56",
   "Tsinkua",
   92055,
-  "../Images/cop-res.jfif",
+  "Images/cop-res.jfif",
   "Korea",
   new Date(2018, 8, 15, 15, 12),
   "0030 / 2289025500",
@@ -229,7 +241,7 @@ var restaurant3 = new Restaurant(
   "Anastasiou 54",
   "Koska",
   83164,
-  "../Images/ja-res.jfif",
+  "Images/ja-res.jfif",
   "Kos",
   new Date(2019, 8, 15, 20, 12),
   "0030 / 2255146554",
@@ -240,7 +252,7 @@ var restaurant4 = new Restaurant(
   "Goldenstreat 156 A",
   "Gold Plate",
   943568,
-  "../Images/par-res.jfif",
+  "Images/par-res.jfif",
   "London",
   new Date(2021, 6, 15, 20, 12),
   "00875 / 8459025500",
@@ -252,7 +264,7 @@ var events1 = new Events(
   "Stadiun LA",
   "Michael Joe",
   8520,
-  "../Images/accustic.jfif",
+  "Images/accustic.jfif",
   "Los Angeles",
   new Date(2018, 1, 21, 10, 12),
   "https://www.splendidmykonos.com/item/restaurant-branco/",
@@ -264,7 +276,7 @@ var events2 = new Events(
   "Vienna Stadium",
   "Rap Concert",
   9653,
-  "../Images/concert.jfif",
+  "Images/concert.jfif",
   "Vienna",
   new Date(2016, 12, 31, 5, 10),
   "https://www.splendidmykonos.com/item/restaurant-branco/",
@@ -276,7 +288,7 @@ var events3 = new Events(
   "Barcelona Stadium",
   "Barcelona",
   73165,
-  "../Images/ball.jfif",
+  "Images/ball.jfif",
   "Barcelona",
   new Date(2000, 10, 10, 10, 10),
   "https://www.splendidmykonos.com/item/restaurant-branco/",
@@ -288,7 +300,7 @@ var events4 = new Events(
   "Myconos Streat",
   "DJ Tiesto",
   123568,
-  "../Images/tiesto.jfif",
+  "Images/tiesto.jfif",
   "Myconos",
   new Date(2020, 1, 12, 7, 12),
   "https://www.splendidmykonos.com/item/restaurant-branco/",
@@ -297,9 +309,21 @@ var events4 = new Events(
   50
 );
 
+let i = 0;
+let z = 0;
+let categ = ["Places", "Restaurants", "Events"];
 for (let val of locat) {
+  if (i % 4 == 0 || i == 0) {
+    document.getElementById("loc").innerHTML += "<h1> " + categ[z] + " </h1>";
+    z++;
+  }
   document.getElementById("loc").innerHTML += val.display();
+  i++;
 }
+
+//   for (let val of locat) {
+//   document.getElementById("loc").innerHTML += val.display();
+// }
 
 // Sort the Date  ascending and descending with the sort button
 
